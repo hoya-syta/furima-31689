@@ -62,7 +62,7 @@
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
 | postal code    | string     | null: false                    |
-| prefectures    | integer    | null: false                    |
+| prefectures_id | integer    | null: false                    |
 | municipalities | string     | null: false                    |
 | address        | string     | null: false                    |
 | house number   | integer    | null: false                    |
