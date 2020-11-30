@@ -61,12 +61,12 @@
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
-| postal code    | string     | null: false                    |
+| postal_code    | string     | null: false                    |
 | prefectures_id | integer    | null: false                    |
 | municipalities | string     | null: false                    |
 | address        | string     | null: false                    |
-| house number   | integer    | null: false                    |
-| phone number   | string     | null: false                    |
+| house_number   | string     | null: false                    |
+| phone_number   | string     | null: false                    |
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
 
