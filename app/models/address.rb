@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-  hus_one :purchases
+  has_one :purchase
 end
