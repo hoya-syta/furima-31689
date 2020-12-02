@@ -18,7 +18,7 @@ RSpec.describe AddressPurchase, type: :model do
     it 'postal_codeが半角のハイフンを含んだ正しい形式でないと保存できないこと' do
       @address_purchase.postal_code = '１２３４５６７'
       @address_purchase.valid?
-      expect(@address_purchase.errors.full_messages).to include("Postal code is invalid")
+      expect(@address_purchase.errors.full_messages).to include('Postal code is invalid')
     end
     it 'prefectures_idが1では登録できないこと' do
       @address_purchase.prefectures_id = '1'
@@ -47,13 +47,12 @@ RSpec.describe AddressPurchase, type: :model do
     it 'phone_numberにはハイフンは不要で、11桁以内でないと保存できないこと' do
       @address_purchase.phone_number = '０９０-１２３-４５６７８'
       @address_purchase.valid?
-      expect(@address_purchase.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)", "Phone number is invalid")
+      expect(@address_purchase.errors.full_messages).to include('Phone number is too long (maximum is 11 characters)', 'Phone number is invalid')
     end
-    it "tokenが空では登録できないこと" do
+    it 'tokenが空では登録できないこと' do
       @address_purchase.token = nil
       @address_purchase.valid?
       expect(@address_purchase.errors.full_messages).to include("Token can't be blank")
     end
   end
 end
-
