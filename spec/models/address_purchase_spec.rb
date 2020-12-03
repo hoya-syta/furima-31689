@@ -20,6 +20,11 @@ RSpec.describe AddressPurchase, type: :model do
       @address_purchase.valid?
       expect(@address_purchase.errors.full_messages).to include('Postal code is invalid')
     end
+    it 'prefectures_idが空だと保存できないこと' do
+      @address_purchase.prefectures_id = nil
+      @address_purchase.valid?
+      expect(@address_purchase.errors.full_messages).to include("Prefectures can't be blank")
+    end
     it 'prefectures_idが1では登録できないこと' do
       @address_purchase.prefectures_id = '1'
       @address_purchase.valid?
@@ -53,6 +58,16 @@ RSpec.describe AddressPurchase, type: :model do
       @address_purchase.token = nil
       @address_purchase.valid?
       expect(@address_purchase.errors.full_messages).to include("Token can't be blank")
+    end
+    it 'user_idが空だと保存できないこと' do
+      @address_purchase.user_id = nil
+      @address_purchase.valid?
+      expect(@address_purchase.errors.full_messages).to include("User can't be blank")
+    end
+    it 'item_idが空だと保存できないこと' do
+      @address_purchase.item_id = nil
+      @address_purchase.valid?
+      expect(@address_purchase.errors.full_messages).to include("Item can't be blank")
     end
   end
 end
