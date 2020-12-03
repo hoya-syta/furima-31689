@@ -35,17 +35,17 @@ RSpec.describe Item, type: :model do
           expect(@item.errors.full_messages).to include('Status must be other than 1')
         end
         it 'delivery_fee_idが1では登録できない' do
-          @item.delivery_fee_id = '1'
+          @item.delivery_fee_id = 1
           @item.valid?
           expect(@item.errors.full_messages).to include('Delivery fee must be other than 1')
         end
         it 'delivery_zone_idが1では登録できない' do
-          @item.delivery_zone_id = '1'
+          @item.delivery_zone_id = 1
           @item.valid?
           expect(@item.errors.full_messages).to include('Delivery zone must be other than 1')
         end
         it 'delivery_time_idが1では登録できない' do
-          @item.delivery_time_id = '1'
+          @item.delivery_time_id = 1
           @item.valid?
           expect(@item.errors.full_messages).to include('Delivery time must be other than 1')
         end

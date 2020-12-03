@@ -33,7 +33,7 @@ RSpec.describe AddressPurchase, type: :model do
         expect(@address_purchase.errors.full_messages).to include("Prefectures can't be blank")
       end
       it 'prefectures_idが1では登録できないこと' do
-        @address_purchase.prefectures_id = '1'
+        @address_purchase.prefectures_id = 1
         @address_purchase.valid?
         expect(@address_purchase.errors.full_messages).to include('Prefectures must be other than 1')
       end
@@ -52,8 +52,13 @@ RSpec.describe AddressPurchase, type: :model do
         @address_purchase.valid?
         expect(@address_purchase.errors.full_messages).to include("Phone number can't be blank")
       end
-      it 'phone_numberにはハイフンは不要で、11桁以内でないと保存できないこと' do
+      it 'phone_numberにはハイフンがあると保存できないこと' do
         @address_purchase.phone_number = '０９０-１２３-４５６７８'
+        @address_purchase.valid?
+        expect(@address_purchase.errors.full_messages).to include('Phone number is invalid')
+      end
+      it 'phone_numberは11桁以内でないと保存できないこと' do
+        @address_purchase.phone_number = '０９０１２３４５６７８９'
         @address_purchase.valid?
         expect(@address_purchase.errors.full_messages).to include('Phone number is too long (maximum is 11 characters)', 'Phone number is invalid')
       end
