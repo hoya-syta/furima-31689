@@ -1,0 +1,21 @@
+DEPRECATION WARNING: Including LoggerSilence is deprecated and will be removed in Rails 6.1. Please use `ActiveSupport::LoggerSilence` instead (called from <top (required)> at /app/config/application.rb:7)
+rake aborted!
+Don't know how to build task 'db:migratemysql' (See the list of available tasks with `rake --tasks`)
+Did you mean?  db:migrate
+/app/vendor/bundle/ruby/2.6.0/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/cli/exec.rb:63:in `load'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/cli/exec.rb:28:in `run'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/cli.rb:476:in `exec'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/vendor/thor/lib/thor.rb:399:in `dispatch'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/cli.rb:30:in `dispatch'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/vendor/thor/lib/thor/base.rb:476:in `start'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/cli.rb:24:in `start'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/exe/bundle:46:in `block in <top (required)>'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/lib/bundler/friendly_errors.rb:123:in `with_friendly_errors'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.1.4/exe/bundle:34:in `<top (required)>'
+/app/bin/bundle:113:in `load'
+/app/bin/bundle:113:in `<main>'
+(See full trace by running task with --trace)
