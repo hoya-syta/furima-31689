@@ -7,8 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[6.0]
       t.string     :address,          default: "",  null: false
       t.string     :house_number,     default: "",  null: false
       t.string     :phone_number,     default: "",  null: false
-      t.references :user,                           null: false,  foreign_key: true
-      t.references :item,                           null: false,  foreign_key: true
+      t.references :purchase,                      null: false,  foreign_key: true
 
       t.timestamps
     end
